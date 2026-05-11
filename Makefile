@@ -1,4 +1,4 @@
-PORTNAME=	mailman
+PORTNAME=	mailman2-python3
 DISTVERSION=	2.1.39
 PORTREVISION=	0
 CATEGORIES=	mail
@@ -6,12 +6,10 @@ CATEGORIES=	mail
 USE_GITHUB=	yes
 GH_ACCOUNT=	thegushi
 GH_PROJECT=	mailman2-python3
-# TODO: Pin GH_TAGNAME to a specific commit hash or release tag before publishing.
-# Using a branch name produces a non-reproducible distfile.
-GH_TAGNAME=	main
+GH_TAGNAME=	fc468393301cb5cd15c27a655edb8aac78ccda58
 
 MAINTAINER=	freebsd@gushi.org
-COMMENT=	Mailing list manager with user-friendly web front-end (Python 3)
+COMMENT=	Mailman 2 mailing list manager ported to Python 3
 WWW=		https://www.list.org/
 
 LICENSE=	GPLv2
@@ -42,6 +40,7 @@ CONFIGURE_ENV+=	CGI_GROUP=${CGI_GID} \
 		MAILMAN_GROUP=${MM_GROUPNAME}
 
 CONFLICTS=	ja-mailman-2.1.* mailman*exim* mailman*postfix* mailman-2.*
+CONFLICTS_INSTALL=	mailman-2.*
 
 # The Mailman port supports a number of variables that may be tweaked at
 # build time.  Getting the values of some of them right is crucial!
