@@ -1,0 +1,5 @@
+# Run "make makesum" to populate this file after pinning GH_TAGNAME
+# to a specific commit hash or release tag.
+TIMESTAMP = 0
+SHA256 (thegushi-mailman2-python3-main.tar.gz) = REPLACE_WITH_MAKE_MAKESUM
+SIZE (thegushi-mailman2-python3-main.tar.gz) = 0
