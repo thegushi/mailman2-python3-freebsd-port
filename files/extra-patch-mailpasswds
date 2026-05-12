@@ -1,6 +1,6 @@
---- cron/mailpasswds.orig	2018-07-25 00:01:28.000000000 +0200
-+++ cron/mailpasswds	2018-10-03 11:00:40.137699000 +0200
-@@ -148,17 +148,8 @@
+--- cron/mailpasswds.orig
++++ cron/mailpasswds
+@@ -147,17 +147,8 @@
                  if mlist.getMemberOption(member,
                                           mm_cfg.SuppressPasswordReminder):
                      continue
