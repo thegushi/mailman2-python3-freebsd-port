@@ -10,7 +10,6 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/gnu-COPYING-GPL
 
 CONFLICTS_INSTALL=	ja-mailman-2.1.* mailman*exim* mailman*postfix* mailman-2.*
-
 USES=		cpe fakeroot python:3.9+ shebangfix
 CPE_VENDOR=	gnu
 USE_GITHUB=	yes
