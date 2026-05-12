@@ -18,6 +18,7 @@ GH_PROJECT=	mailman2-python3
 GH_TAGNAME=	fc468393301cb5cd15c27a655edb8aac78ccda58
 USE_RC_SUBR=	mailman
 SHEBANG_FILES=	bin/msgfmt.py \
+		scripts/convert_to_utf8 \
 		tests/fblast.py \
 		tests/onebounce.py
 
