@@ -155,7 +155,6 @@
 %%MMDIR%%/Mailman/UserDesc.py
 %%MMDIR%%/Mailman/Utils.py
 %%MMDIR%%/Mailman/Version.py
-%%MMDIR%%/Mailman/__init__.py
 %%MMDIR%%/Mailman/htmlformat.py
 %%MMDIR%%/Mailman/i18n.py
 @sample %%MMDIR%%/Mailman/mm_cfg.py.dist %%MMDIR%%/Mailman/mm_cfg.py
