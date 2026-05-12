@@ -15,7 +15,7 @@ CPE_VENDOR=	gnu
 USE_GITHUB=	yes
 GH_ACCOUNT=	thegushi
 GH_PROJECT=	mailman2-python3
-GH_TAGNAME=	fc468393301cb5cd15c27a655edb8aac78ccda58
+GH_TAGNAME=	3552c66d72f80fd090fde95a9b8a97860fcb7e09
 USE_RC_SUBR=	mailman
 SHEBANG_FILES=	bin/msgfmt.py \
 		scripts/convert_to_utf8 \
