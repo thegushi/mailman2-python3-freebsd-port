@@ -4,8 +4,8 @@
  
  #: bin/check_perms:197
  msgid "directory must be at least 02775: %(d)s"
--msgstr "Verzeichnisrechte müssen midestens 02775 betragen: %(d)s"
-+msgstr "Verzeichnisrechte müssen mindestens 02775 betragen: %(d)s"
+-msgstr "Verzeichnisrechte mÃ¼ssen midestens 02775 betragen: %(d)s"
++msgstr "Verzeichnisrechte mÃ¼ssen mindestens 02775 betragen: %(d)s"
  
  #: bin/check_perms:209
  msgid "checking perms on %(private)s"

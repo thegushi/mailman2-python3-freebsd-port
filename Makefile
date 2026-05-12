@@ -1,12 +1,6 @@
 PORTNAME=	mailman2-python3
 DISTVERSION=	2.1.39
-PORTREVISION=	0
 CATEGORIES=	mail
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	thegushi
-GH_PROJECT=	mailman2-python3
-GH_TAGNAME=	fc468393301cb5cd15c27a655edb8aac78ccda58
 
 MAINTAINER=	freebsd@gushi.org
 COMMENT=	Mailman 2 mailing list manager ported to Python 3
@@ -15,8 +9,17 @@ WWW=		https://www.list.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/gnu-COPYING-GPL
 
-USES=		cpe fakeroot python:3.9+ shebangfix tar:tgz
+CONFLICTS_INSTALL=	ja-mailman-2.1.* mailman*exim* mailman*postfix* mailman-2.*
+
+BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dnspython>=0:dns/py-dnspython@${PY_FLAVOR}
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dnspython>=0:dns/py-dnspython@${PY_FLAVOR}
+
+USES=		cpe fakeroot python:3.9+ shebangfix
 CPE_VENDOR=	gnu
+USE_GITHUB=	yes
+GH_ACCOUNT=	thegushi
+GH_PROJECT=	mailman2-python3
+GH_TAGNAME=	fc468393301cb5cd15c27a655edb8aac78ccda58
 
 USE_RC_SUBR=	mailman
 SHEBANG_FILES=	bin/msgfmt.py \
@@ -38,9 +41,6 @@ CONFIGURE_ENV+=	CGI_GROUP=${CGI_GID} \
 		MAIL_GROUP=${MAIL_GID} \
 		MAILMAN_USER=${MM_USERNAME} \
 		MAILMAN_GROUP=${MM_GROUPNAME}
-
-CONFLICTS=	ja-mailman-2.1.* mailman*exim* mailman*postfix* mailman-2.*
-CONFLICTS_INSTALL=	mailman-2.*
 
 # The Mailman port supports a number of variables that may be tweaked at
 # build time.  Getting the values of some of them right is crucial!
@@ -128,9 +128,6 @@ MAIL_GID?=	_smtpd
 .if ${PORT_OPTIONS:MNOMAILPWD}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-mailpasswds
 .endif
-
-BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dnspython>=0:dns/py-dnspython@${PY_FLAVOR}
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dnspython>=0:dns/py-dnspython@${PY_FLAVOR}
 
 pre-everything::
 	@${ECHO} ""
